@@ -1,0 +1,173 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+  cursor: pointer;
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Solid variant */
+.btn-solid {
+  background: var(--color-walnut);
+  color: var(--color-white);
+}
+
+.btn-solid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--color-amber);
+  transition: left var(--duration-normal) var(--ease-out);
+  z-index: 0;
+}
+
+.btn-solid:hover::before {
+  left: 0;
+}
+
+.btn-solid .btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-solid:hover {
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.03);
+}
+
+/* Ghost variant */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-amber);
+  border: 2px solid var(--color-amber);
+}
+
+.btn-ghost::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--color-amber);
+  transition: left var(--duration-normal) var(--ease-out);
+  z-index: 0;
+}
+
+.btn-ghost:hover::before {
+  left: 0;
+}
+
+.btn-ghost:hover {
+  color: var(--color-white);
+  transform: scale(1.03);
+}
+
+.btn-ghost .btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* White ghost */
+.btn-ghost-white {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-ghost-white::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: left var(--duration-normal) var(--ease-out);
+  z-index: 0;
+}
+
+.btn-ghost-white:hover::before {
+  left: 0;
+}
+
+.btn-ghost-white:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.03);
+}
+
+.btn-ghost-white .btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sage/Green CTA */
+.btn-sage {
+  background: var(--color-sage);
+  color: var(--color-white);
+}
+
+.btn-sage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #6a7a5c;
+  transition: left var(--duration-normal) var(--ease-out);
+  z-index: 0;
+}
+
+.btn-sage:hover::before {
+  left: 0;
+}
+
+.btn-sage:hover {
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.03);
+}
+
+.btn-sage .btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* Small size */
+.btn-sm {
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--fs-xs);
+  min-height: 36px;
+}
+
+/* Large size */
+.btn-lg {
+  padding: var(--space-5) var(--space-10);
+  font-size: var(--fs-base);
+  min-height: 56px;
+}
+
+/* Full width */
+.btn-full {
+  width: 100%;
+}
